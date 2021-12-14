@@ -1,3 +1,2 @@
-export { ExampleComponent } from './components/example';
-
-export { useExampleHook } from './hooks/example';
+export { FuryProvider } from './providers/FuryProvider';
+export type { FuryProviderProps } from './providers/FuryProvider';

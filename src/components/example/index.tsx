@@ -1,10 +1,11 @@
 import React from 'react';
+import Typography from '@mui/material/Typography';
 
 /**
  * ExampleComponent
  */
 export const ExampleComponent = ({ text }: ExampleComponentProps) => (
-  <span data-testid="test-component">{text}</span>
+  <Typography data-testid="test-component">{text}</Typography>
 );
 
 /**
