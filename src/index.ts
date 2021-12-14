@@ -1,3 +1,3 @@
-export { ExampleComponent } from './component';
+export { ExampleComponent } from './components/example';
 
-export { useExampleHook } from './hook';
+export { useExampleHook } from './hooks/example';

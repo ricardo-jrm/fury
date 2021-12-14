@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { ExampleComponent } from './component';
+import { ExampleComponent } from '.';
 
 describe('example test suite', () => {
   it('renders test component', () => {
