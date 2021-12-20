@@ -7,7 +7,9 @@ import { FuryContext, FuryContextType } from '../../hooks/useFury';
 /**
  * Themes record
  */
-export type FuryThemes = Record<string, ThemeOptions>;
+export type FuryThemes = {
+  [x: string]: ThemeOptions;
+};
 
 /**
  * FuryProvider interface
