@@ -1,7 +1,6 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import { ExampleComponent, ExampleComponentProps } from '.';
-import { useFury } from '../../index';
 
 export default {
   title: 'Example',
