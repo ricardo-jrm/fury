@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo } from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { ThemeProvider, createTheme, ThemeOptions } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { useLocalState } from '@ricardo-jrm/use-local-state';
@@ -73,11 +73,6 @@ export const FuryProvider = ({
     }),
     [themeActive, themeSetById],
   );
-
-  // logging
-  useEffect(() => {
-    console.log({ themeActiveId, themeActive });
-  }, [themeActiveId, themeActive]);
 
   return (
     <FuryContext.Provider value={ctxFury}>
