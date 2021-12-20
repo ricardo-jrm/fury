@@ -1,6 +1,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import { ExampleComponent, ExampleComponentProps } from '.';
+import { useFury } from '../../index';
 
 export default {
   title: 'Example',
@@ -11,5 +12,7 @@ export default {
 } as Meta;
 
 export const StoryComponent: Story<ExampleComponentProps> = (args) => (
-  <ExampleComponent {...args} text="Hello World" />
+  <div>
+    <ExampleComponent {...args} text="Hello World" />
+  </div>
 );
