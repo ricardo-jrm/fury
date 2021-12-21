@@ -34,7 +34,45 @@ yarn add @ricardo-jrm/fury
 ### <b>Usage</b>
 
 ```ts
-import { ExampleComponent, useExampleHook } from '@ricardo-jrm/fury';
+// app
+import { FuryProvider, FuryThemes, FuryMetaRecord, useFury } from '@ricardo-jrm/fury';
+
+const exampleMetas: FuryMetaRecord = {
+  meta1: { name: 'Meta 1' },
+  meta2: { name: 'Meta 2' },
+};
+
+const exampleThemes: FuryThemes = {
+  theme1: {
+    typography: {
+      body1: {
+        fontSize: '100px',
+        color: 'red',
+      },
+    },
+  },
+  theme2: {
+    typography: {
+      body1: {
+        fontSize: '75px',
+        color: 'green',
+      },
+    },
+  },
+};
+
+<FuryProvider
+  themes={exampleThemes}
+  themesDefault="theme1"
+  metas={exampleMetas}
+  metasDefault="default"
+>
+  {...}
+</FuryProvider>
+
+
+// component
+const { themeActive, themeSetById, metaActive, metaSetById } = useFury();
 ```
 
 <br />
