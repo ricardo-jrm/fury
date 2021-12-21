@@ -76,6 +76,7 @@
     "function-paren-newline": 0,
     "react/jsx-no-useless-fragment": 0,
     "object-curly-newline": 0,
-    "keyword-spacing": "warn"
+    "keyword-spacing": "warn",
+    "react/jsx-one-expression-per-line": 0
   }
 }

@@ -1,4 +1,4 @@
-import { FuryProvider, FuryThemes } from '../src';
+import { FuryProvider, FuryThemes, FuryMetaRecord } from '../src';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -8,6 +8,12 @@ export const parameters = {
       date: /Date$/,
     },
   },
+};
+
+const tempMetas: FuryMetaRecord = {
+  default: { name: 'Default' },
+  meta1: { name: 'Meta 1' },
+  meta2: { name: 'Meta 2' },
 };
 
 const tempThemes: FuryThemes = {
@@ -47,7 +53,12 @@ const tempThemes: FuryThemes = {
 
 export const decorators = [
   (Story) => (
-    <FuryProvider themes={tempThemes} themesDefault="theme1">
+    <FuryProvider
+      themes={tempThemes}
+      themesDefault="theme1"
+      metas={tempMetas}
+      metasDefault="default"
+    >
       {Story()}
     </FuryProvider>
   ),

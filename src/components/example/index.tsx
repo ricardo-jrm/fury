@@ -5,7 +5,7 @@ import { useFury, Typography, ResponsivePie } from '../../index';
  * ExampleComponent
  */
 export const ExampleComponent = ({ text }: ExampleComponentProps) => {
-  const { themeSetById } = useFury();
+  const { themeSetById, metaActive, metaSetById } = useFury();
 
   const pieData = useMemo(
     () => [
@@ -41,7 +41,7 @@ export const ExampleComponent = ({ text }: ExampleComponentProps) => {
   return (
     <div>
       <Typography data-testid="test-component" variant="body1">
-        {text}
+        {`${metaActive.name}: ${text}`}
       </Typography>
       <div>
         <button type="button" onClick={() => themeSetById('theme1')}>
@@ -55,6 +55,17 @@ export const ExampleComponent = ({ text }: ExampleComponentProps) => {
         </button>
         <button type="button" onClick={() => themeSetById('theme4')}>
           Theme 4
+        </button>
+      </div>
+      <div>
+        <button type="button" onClick={() => metaSetById('meta1')}>
+          Meta 1
+        </button>
+        <button type="button" onClick={() => metaSetById('meta2')}>
+          Meta 2
+        </button>
+        <button type="button" onClick={() => metaSetById('default')}>
+          Meta Default
         </button>
       </div>
       <div style={{ height: 360 }}>
