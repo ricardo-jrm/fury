@@ -28,7 +28,9 @@
     "jest",
     "prettier",
     "husky",
-    "cicd"
+    "cicd",
+    "mui",
+    "nivo"
   ],
   "scripts": {
     "build": "tsc",
