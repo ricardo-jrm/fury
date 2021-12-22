@@ -6,7 +6,7 @@ import { ThemeOptions } from '@mui/material/styles';
  */
 export interface FuryContextType {
   /**
-   * Active theme ID
+   * Active theme
    */
   themeActive: ThemeOptions;
   /**
