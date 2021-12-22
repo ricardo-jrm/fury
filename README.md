@@ -35,12 +35,7 @@ yarn add @ricardo-jrm/fury
 
 ```ts
 // app
-import { FuryProvider, FuryThemes, FuryMetaRecord, useFury } from '@ricardo-jrm/fury';
-
-const exampleMetas: FuryMetaRecord = {
-  meta1: { name: 'Meta 1' },
-  meta2: { name: 'Meta 2' },
-};
+import { FuryProvider, FuryThemes, useFury } from '@ricardo-jrm/fury';
 
 const exampleThemes: FuryThemes = {
   theme1: {
@@ -64,15 +59,13 @@ const exampleThemes: FuryThemes = {
 <FuryProvider
   themes={exampleThemes}
   themesDefault="theme1"
-  metas={exampleMetas}
-  metasDefault="default"
 >
   {...}
 </FuryProvider>
 
 
 // component
-const { themeActive, themeSetById, metaActive, metaSetById } = useFury();
+const { themeActive, themeSetById } = useFury();
 ```
 
 <br />
