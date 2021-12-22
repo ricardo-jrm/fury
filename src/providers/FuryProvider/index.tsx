@@ -2,11 +2,7 @@ import React, { useCallback, useMemo } from 'react';
 import { ThemeProvider, createTheme, ThemeOptions } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { useLocalState } from '@ricardo-jrm/use-local-state';
-import {
-  FuryContext,
-  FuryContextType,
-  FuryMetaRecord,
-} from '../../hooks/useFury';
+import { FuryContext, FuryContextType } from '../../hooks/useFury';
 
 /**
  * Themes record
@@ -35,14 +31,6 @@ export interface FuryProviderProps {
    * Default theme ID
    */
   themesDefault: string;
-  /**
-   * Provided metas record
-   */
-  metas: FuryMetaRecord;
-  /**
-   * Default meta ID
-   */
-  metasDefault: string;
 }
 
 /**
@@ -53,12 +41,10 @@ export const FuryProvider = ({
   lsid,
   themes,
   themesDefault,
-  metas,
-  metasDefault,
 }: FuryProviderProps) => {
   // init active theme
   const [themeActiveId, themeActiveIdSet] = useLocalState(
-    lsid ? `${lsid}-theme-id` : 'fury-theme-id',
+    lsid || 'fury',
     themesDefault,
   );
   const themeActive = useMemo(
@@ -79,35 +65,13 @@ export const FuryProvider = ({
     [themes, themeActiveIdSet],
   );
 
-  // init active meta
-  const [metaActiveId, metaActiveIdSet] = useLocalState(
-    lsid ? `${lsid}-meta-id` : 'fury-meta-id',
-    metasDefault,
-  );
-  const metaActive = useMemo(() => metas[metaActiveId], [metas, metaActiveId]);
-
-  // set meta by id
-  const metaSetById = useCallback<FuryContextType['metaSetById']>(
-    (metaId) => {
-      if (metas[metaId]) {
-        metaActiveIdSet(metaId);
-      } else {
-        // eslint-disable-next-line no-console
-        console.log('meta not found for given id: ', metaId);
-      }
-    },
-    [metas, metaActiveIdSet],
-  );
-
   // build ctx
   const ctxFury = useMemo<FuryContextType>(
     () => ({
       themeActive,
       themeSetById,
-      metaActive,
-      metaSetById,
     }),
-    [themeActive, themeSetById, metaActive, metaSetById],
+    [themeActive, themeSetById],
   );
 
   return (
