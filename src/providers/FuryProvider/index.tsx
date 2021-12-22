@@ -7,7 +7,7 @@ import { FuryContext, FuryContextType } from '../../hooks/useFury';
 /**
  * Themes record
  */
-export type FuryThemes = {
+export type FuryRecord = {
   [x: string]: ThemeOptions;
 };
 
@@ -24,13 +24,13 @@ export interface FuryProviderProps {
    */
   lsid?: string;
   /**
-   * Provided themes record
+   * Provided fury record
    */
-  themes: FuryThemes;
+  fury: FuryRecord;
   /**
    * Default theme ID
    */
-  themesDefault: string;
+  furyDefault: string;
 }
 
 /**
@@ -39,44 +39,45 @@ export interface FuryProviderProps {
 export const FuryProvider = ({
   children,
   lsid,
-  themes,
-  themesDefault,
+  fury,
+  furyDefault,
 }: FuryProviderProps) => {
-  // init active theme
-  const [themeActiveId, themeActiveIdSet] = useLocalState(
+  // init active fury
+  const [furyActiveId, furyActiveIdSet] = useLocalState(
     lsid || 'fury',
-    themesDefault,
+    furyDefault,
   );
-  const themeActive = useMemo(
-    () => createTheme(themes[themeActiveId]),
-    [themes, themeActiveId],
+  const furyActive = useMemo(
+    () => createTheme(fury[furyActiveId]),
+    [fury, furyActiveId],
   );
 
-  // set theme by id
-  const themeSetById = useCallback<FuryContextType['themeSetById']>(
-    (themeId) => {
-      if (themes[themeId]) {
-        themeActiveIdSet(themeId);
+  // set fury by id
+  const furySetById = useCallback<FuryContextType['furySetById']>(
+    (furyId) => {
+      if (fury[furyId]) {
+        furyActiveIdSet(furyId);
       } else {
         // eslint-disable-next-line no-console
-        console.log('theme not found for given id: ', themeId);
+        console.warn('fury not found for given id: ', furyId);
       }
     },
-    [themes, themeActiveIdSet],
+    [fury, furyActiveIdSet],
   );
 
   // build ctx
   const ctxFury = useMemo<FuryContextType>(
     () => ({
-      themeActive,
-      themeSetById,
+      furyActive,
+      furyActiveId,
+      furySetById,
     }),
-    [themeActive, themeSetById],
+    [furyActive, furyActiveId, furySetById],
   );
 
   return (
     <FuryContext.Provider value={ctxFury}>
-      <ThemeProvider theme={themeActive}>
+      <ThemeProvider theme={furyActive}>
         <CssBaseline />
         {children}
       </ThemeProvider>

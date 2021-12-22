@@ -7,7 +7,7 @@ import { ResponsivePie } from '../../nivo';
  * ExampleComponent
  */
 export const ExampleComponent = ({ text }: ExampleComponentProps) => {
-  const { themeSetById } = useFury();
+  const { furySetById, furyActiveId } = useFury();
 
   const pieData = useMemo(
     () => [
@@ -43,20 +43,20 @@ export const ExampleComponent = ({ text }: ExampleComponentProps) => {
   return (
     <div>
       <Typography data-testid="test-component" variant="body1">
-        {text}
+        {furyActiveId}: {text}
       </Typography>
       <div>
-        <button type="button" onClick={() => themeSetById('theme1')}>
-          Theme 1
+        <button type="button" onClick={() => furySetById('fury1')}>
+          Fury 1
         </button>
-        <button type="button" onClick={() => themeSetById('theme2')}>
-          Theme 2
+        <button type="button" onClick={() => furySetById('fury2')}>
+          Fury 2
         </button>
-        <button type="button" onClick={() => themeSetById('theme3')}>
-          Theme 3
+        <button type="button" onClick={() => furySetById('fury3')}>
+          Fury 3
         </button>
-        <button type="button" onClick={() => themeSetById('theme4')}>
-          Theme 4
+        <button type="button" onClick={() => furySetById('fury4')}>
+          Fury 4
         </button>
       </div>
       <div style={{ height: 360 }}>

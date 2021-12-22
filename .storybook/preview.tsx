@@ -1,4 +1,4 @@
-import { FuryProvider, FuryThemes } from '../src';
+import { FuryProvider, FuryRecord } from '../src';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -10,8 +10,8 @@ export const parameters = {
   },
 };
 
-const tempThemes: FuryThemes = {
-  theme1: {
+const exampleFury: FuryRecord = {
+  fury1: {
     typography: {
       body1: {
         fontSize: '100px',
@@ -19,7 +19,7 @@ const tempThemes: FuryThemes = {
       },
     },
   },
-  theme2: {
+  fury2: {
     typography: {
       body1: {
         fontSize: '75px',
@@ -27,7 +27,7 @@ const tempThemes: FuryThemes = {
       },
     },
   },
-  theme3: {
+  fury3: {
     typography: {
       body1: {
         fontSize: '50px',
@@ -35,7 +35,7 @@ const tempThemes: FuryThemes = {
       },
     },
   },
-  theme4: {
+  fury4: {
     typography: {
       body1: {
         fontSize: '25px',
@@ -47,7 +47,7 @@ const tempThemes: FuryThemes = {
 
 export const decorators = [
   (Story) => (
-    <FuryProvider themes={tempThemes} themesDefault="theme1">
+    <FuryProvider fury={exampleFury} furyDefault="fury1">
       {Story()}
     </FuryProvider>
   ),

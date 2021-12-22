@@ -34,11 +34,11 @@ yarn add @ricardo-jrm/fury
 ### <b>Usage</b>
 
 ```ts
-// app
-import { FuryProvider, FuryThemes, useFury } from '@ricardo-jrm/fury';
+import { useFury, FuryProvider, FuryRecord } from '@ricardo-jrm/fury';
 
-const exampleThemes: FuryThemes = {
-  theme1: {
+// app
+const exampleFury: FuryRecord = {
+  fury1: {
     typography: {
       body1: {
         fontSize: '100px',
@@ -46,7 +46,7 @@ const exampleThemes: FuryThemes = {
       },
     },
   },
-  theme2: {
+  fury2: {
     typography: {
       body1: {
         fontSize: '75px',
@@ -56,16 +56,13 @@ const exampleThemes: FuryThemes = {
   },
 };
 
-<FuryProvider
-  themes={exampleThemes}
-  themesDefault="theme1"
->
+<FuryProvider fury={exampleFury} furyDefault="fury1">
   {...}
 </FuryProvider>
 
 
 // component
-const { themeActive, themeSetById } = useFury();
+const { furyActive, furyActiveId, furySetById } = useFury();
 ```
 
 <br />

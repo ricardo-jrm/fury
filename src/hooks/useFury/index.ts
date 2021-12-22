@@ -6,21 +6,26 @@ import { ThemeOptions } from '@mui/material/styles';
  */
 export interface FuryContextType {
   /**
-   * Active theme
+   * Active fury
    */
-  themeActive: ThemeOptions;
+  furyActive: ThemeOptions;
   /**
-   * Set theme by ID
+   * Active fury id
    */
-  themeSetById: (themeId: string) => void;
+  furyActiveId: string;
+  /**
+   * Set fury by ID
+   */
+  furySetById: (furyId: string) => void;
 }
 
 /**
  * Initial value
  */
 const init: FuryContextType = {
-  themeActive: {},
-  themeSetById: () => undefined,
+  furyActive: {},
+  furyActiveId: 'default',
+  furySetById: () => undefined,
 };
 
 /**
