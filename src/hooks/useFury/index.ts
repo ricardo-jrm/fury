@@ -1,5 +1,5 @@
 import { useContext, createContext } from 'react';
-import { ThemeOptions } from '@mui/material/styles';
+import { Theme, createTheme } from '@mui/material/styles';
 
 /**
  * Context interface
@@ -8,7 +8,7 @@ export interface FuryContextType {
   /**
    * Active fury
    */
-  furyActive: ThemeOptions;
+  furyActive: Theme;
   /**
    * Active fury id
    */
@@ -23,7 +23,7 @@ export interface FuryContextType {
  * Initial value
  */
 const init: FuryContextType = {
-  furyActive: {},
+  furyActive: createTheme({}),
   furyActiveId: 'default',
   furySetById: () => undefined,
 };

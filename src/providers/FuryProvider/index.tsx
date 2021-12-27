@@ -1,5 +1,10 @@
 import React, { useCallback, useMemo } from 'react';
-import { ThemeProvider, createTheme, ThemeOptions } from '@mui/material/styles';
+import {
+  ThemeProvider,
+  createTheme,
+  ThemeOptions,
+  Theme,
+} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { useLocalState } from '@ricardo-jrm/use-local-state';
 import { FuryContext, FuryContextType } from '../../hooks/useFury';
@@ -47,7 +52,7 @@ export const FuryProvider = ({
     lsid || 'fury',
     furyDefault,
   );
-  const furyActive = useMemo(
+  const furyActive: Theme = useMemo<Theme>(
     () => createTheme(fury[furyActiveId]),
     [fury, furyActiveId],
   );
