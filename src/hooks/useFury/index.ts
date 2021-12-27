@@ -1,5 +1,5 @@
 import { useContext, createContext } from 'react';
-import { Theme, createTheme } from '@mui/material/styles';
+import { Theme, createTheme } from '@mui/material';
 
 /**
  * Context interface

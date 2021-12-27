@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { useFury } from '../../index';
-import { Typography } from '../../mui';
+import { Typography, Button } from '../../mui';
 import { ResponsivePie } from '../../nivo';
 
 /**
@@ -48,18 +48,34 @@ export const ExampleComponent = ({ text }: ExampleComponentProps) => {
       </Typography>
       <Typography variant="body1">color: {palette.primary.main}</Typography>
       <div>
-        <button type="button" onClick={() => furySetById('fury1')}>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => furySetById('fury1')}
+        >
           Fury 1
-        </button>
-        <button type="button" onClick={() => furySetById('fury2')}>
+        </Button>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => furySetById('fury2')}
+        >
           Fury 2
-        </button>
-        <button type="button" onClick={() => furySetById('fury3')}>
+        </Button>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => furySetById('fury3')}
+        >
           Fury 3
-        </button>
-        <button type="button" onClick={() => furySetById('fury4')}>
+        </Button>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => furySetById('fury4')}
+        >
           Fury 4
-        </button>
+        </Button>
       </div>
       <div style={{ height: 360 }}>
         <ResponsivePie

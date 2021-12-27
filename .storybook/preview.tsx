@@ -12,6 +12,11 @@ export const parameters = {
 
 const exampleFury: FuryRecord = {
   fury1: {
+    palette: {
+      primary: {
+        main: '#037abd',
+      },
+    },
     typography: {
       body1: {
         fontSize: '100px',
@@ -20,6 +25,11 @@ const exampleFury: FuryRecord = {
     },
   },
   fury2: {
+    palette: {
+      primary: {
+        main: '#d02525',
+      },
+    },
     typography: {
       body1: {
         fontSize: '75px',
@@ -28,6 +38,11 @@ const exampleFury: FuryRecord = {
     },
   },
   fury3: {
+    palette: {
+      primary: {
+        main: '#c000ff',
+      },
+    },
     typography: {
       body1: {
         fontSize: '50px',
@@ -36,6 +51,11 @@ const exampleFury: FuryRecord = {
     },
   },
   fury4: {
+    palette: {
+      primary: {
+        main: '#ff5200',
+      },
+    },
     typography: {
       body1: {
         fontSize: '25px',
