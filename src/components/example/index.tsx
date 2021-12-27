@@ -46,9 +46,7 @@ export const ExampleComponent = ({ text }: ExampleComponentProps) => {
       <Typography data-testid="test-component" variant="body1">
         {furyActiveId}: {text}
       </Typography>
-      <Typography data-testid="test-component" variant="body1">
-        color: {palette.primary.main}
-      </Typography>
+      <Typography variant="body1">color: {palette.primary.main}</Typography>
       <div>
         <button type="button" onClick={() => furySetById('fury1')}>
           Fury 1
