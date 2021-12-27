@@ -40,7 +40,7 @@ import { useFury, FuryProvider, FuryRecord } from '@ricardo-jrm/fury';
 const exampleFury: FuryRecord = {
   fury1: {
     typography: {
-      body1: {
+      h1: {
         fontSize: '100px',
         color: 'red',
       },
@@ -48,7 +48,7 @@ const exampleFury: FuryRecord = {
   },
   fury2: {
     typography: {
-      body1: {
+      h1: {
         fontSize: '75px',
         color: 'green',
       },
