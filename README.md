@@ -11,7 +11,6 @@
 
 ![lang](https://img.shields.io/github/languages/top/ricardo-jrm/fury?style=for-the-badge)
 ![version](https://img.shields.io/npm/v/@ricardo-jrm/fury?style=for-the-badge)
-![size](https://img.shields.io/bundlephobia/min/@ricardo-jrm/fury?style=for-the-badge)
 
 </div>
 
