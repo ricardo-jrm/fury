@@ -23,7 +23,7 @@
 
 ### <b>Install</b>
 
-```ts
+```tsx
 npm install @ricardo-jrm/fury
 
 yarn add @ricardo-jrm/fury
@@ -31,12 +31,38 @@ yarn add @ricardo-jrm/fury
 
 <br />
 
+### <b>Scripts</b>
+
+```tsx
+// install deps
+yarn install
+
+// run lint
+yarn lint
+
+// run unit tests
+yarn test
+
+// run storybook
+yarn sb
+```
+
+<br />
+
+### <b>Project</b>
+
+- [Project Page](https://l1b3r.notion.site/fury-5acb71cd3a0446a0a520bfa4cf853081)
+- [Source Code](https://github.com/ricardo-jrm/fury)
+- [Releases Page](https://github.com/ricardo-jrm/fury/releases)
+
+<br />
+
 ### <b>Usage</b>
 
-```ts
+```tsx
 import { useFury, FuryProvider, FuryRecord } from '@ricardo-jrm/fury';
 
-// app
+// provider
 const exampleFury: FuryRecord = {
   fury1: {
     typography: {
@@ -61,9 +87,37 @@ const exampleFury: FuryRecord = {
 </FuryProvider>
 
 
-// component
+// hook
 const { furyActive, furyActiveId, furySetById } = useFury();
 ```
+
+<br />
+
+### <b>Project Dependencies</b>
+
+- <b>TS Package Boilerplate: [🟪 @ricardo-jrm/nova](https://github.com/ricardo-jrm/nova)</b>
+- <b>React Module Boilerplate: [🟣 @ricardo-jrm/supernova](https://github.com/ricardo-jrm/supernova)</b>
+- <b>React Utility Hooks: [🌘 @ricardo-jrm/reaper](https://github.com/ricardo-jrm/reaper)</b>
+- <b>React UI Components and Themes: [🔥 @ricardo-jrm/fury](https://github.com/ricardo-jrm/fury)</b>
+- <b>React Meta Data Handler: [⚫ @ricardo-jrm/pain](https://github.com/ricardo-jrm/pain)</b>
+- <b>React API Client: [🌸 @ricardo-jrm/empathy](https://github.com/ricardo-jrm/empathy)</b>
+- <b>React Lightweight Intl: [☁ @ricardo-jrm/echo](https://github.com/ricardo-jrm/echo)</b>
+
+<br />
+
+### <b>Dev Dependencies</b>
+
+- `Yarn`
+- `Typescript`
+- `React`
+- `Material-UI`
+- `Prettier`
+- `ESLint`
+- `Commit Lint`
+- `Lint Staged`
+- `Husky`
+- `Jest`
+- `Semantic Release`
 
 <br />
 
