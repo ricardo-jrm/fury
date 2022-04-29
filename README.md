@@ -1,16 +1,16 @@
 <div align="center">
 
-# 🔥 `@ricardo-jrm/fury`
+# 🔥 `@ricardojrmcom/fury`
 
 <b>React Web UI</b>
 
-![build](https://img.shields.io/github/workflow/status/ricardo-jrm/fury/Continuous%20Integration?style=for-the-badge)
-![license](https://img.shields.io/github/license/ricardo-jrm/fury?style=for-the-badge)
+![build](https://img.shields.io/github/workflow/status/ricardojrmcom/fury/Continuous%20Integration?style=for-the-badge)
+![license](https://img.shields.io/github/license/ricardojrmcom/fury?style=for-the-badge)
 
 ![author](<https://img.shields.io/badge/Author-Ricardo%20%3Cl1b3r__--%3E%20Mota%20(%40ricardo--jrm)-orange?style=for-the-badge>)
 
-![lang](https://img.shields.io/github/languages/top/ricardo-jrm/fury?style=for-the-badge)
-![version](https://img.shields.io/npm/v/@ricardo-jrm/fury?style=for-the-badge)
+![lang](https://img.shields.io/github/languages/top/ricardojrmcom/fury?style=for-the-badge)
+![version](https://img.shields.io/npm/v/@ricardojrmcom/fury?style=for-the-badge)
 
 </div>
 
@@ -23,9 +23,9 @@
 ### <b>Install</b>
 
 ```tsx
-npm install @ricardo-jrm/fury
+npm install @ricardojrmcom/fury
 
-yarn add @ricardo-jrm/fury
+yarn add @ricardojrmcom/fury
 ```
 
 <br />
@@ -33,7 +33,7 @@ yarn add @ricardo-jrm/fury
 ### <b>Usage</b>
 
 ```tsx
-import { useFury, FuryProvider, FuryRecord } from '@ricardo-jrm/fury';
+import { useFury, FuryProvider, FuryRecord } from '@ricardojrmcom/fury';
 
 // provider
 const exampleFury: FuryRecord = {
@@ -87,15 +87,15 @@ yarn sb
 ### <b>Project</b>
 
 - [Project Page](https://l1b3r.notion.site/fury-5acb71cd3a0446a0a520bfa4cf853081)
-- [Source Code](https://github.com/ricardo-jrm/fury)
-- [Releases Page](https://github.com/ricardo-jrm/fury/releases)
+- [Source Code](https://github.com/ricardojrmcom/fury)
+- [Releases Page](https://github.com/ricardojrmcom/fury/releases)
 
 <br />
 
 ### <b>Project Dependencies</b>
 
-- <b>TS Package Boilerplate: [🟪 @ricardo-jrm/nova](https://github.com/ricardo-jrm/nova)</b>
-- <b>React Module Boilerplate: [🟣 @ricardo-jrm/supernova](https://github.com/ricardo-jrm/supernova)</b>
+- <b>TS Package Boilerplate: [🟪 @ricardojrmcom/nova](https://github.com/ricardojrmcom/nova)</b>
+- <b>React Module Boilerplate: [🟣 @ricardojrmcom/supernova](https://github.com/ricardojrmcom/supernova)</b>
 
 <br />
 
@@ -121,8 +121,8 @@ yarn sb
 
 ### <b>License</b>
 
-[MIT](https://github.com/ricardo-jrm/fury/blob/main/LICENSE) © Ricardo <l1b3r\_-> Mota ([@ricardo-jrm](https://github.com/ricardo-jrm))
+[MIT](https://github.com/ricardojrmcom/fury/blob/main/LICENSE) © Ricardo <l1b3r\_-> Mota ([@ricardojrmcom](https://github.com/ricardojrmcom))
 
-Bootstrapped with 🟣[@ricardo-jrm/supernova](https://github.com/ricardo-jrm/supernova)
+Bootstrapped with 🟣[@ricardojrmcom/supernova](https://github.com/ricardojrmcom/supernova)
 
 <br />

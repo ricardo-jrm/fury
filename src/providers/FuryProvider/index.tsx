@@ -1,7 +1,7 @@
 import React, { useCallback, useMemo } from 'react';
 import { ThemeProvider, createTheme, ThemeOptions, Theme } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
-import { useLocalState } from '@ricardo-jrm/use-local-state';
+import { useLocalState } from '@ricardojrmcom/use-local-state';
 import { FuryContext, FuryContextType } from '../../hooks/useFury';
 
 /**
