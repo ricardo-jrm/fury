@@ -1,7 +1,7 @@
 {
   "name": "@ricardojrmcom/fury",
   "description": "React Web UI",
-  "version": "0.0.7-development",
+  "version": "0.0.8-development",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "private": false,
